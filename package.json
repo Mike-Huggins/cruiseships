@@ -1,0 +1,22 @@
+{
+  "name": "cruiseships",
+  "version": "1.0.0",
+  "description": "Created the Cruiseships repository",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mike-Huggins/cruiseships.git"
+  },
+  "author": "Mike Huggins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mike-Huggins/cruiseships/issues"
+  },
+  "homepage": "https://github.com/Mike-Huggins/cruiseships#readme",
+  "devDependencies": {
+    "jest": "^24.1.0"
+  }
+}
