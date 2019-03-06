@@ -31,4 +31,16 @@ xit('add and subtract passengers and have a check for remaining places', () => {
     expect(() => megacruise.passengerAdd(101)).toThrow('That is 1 too many, draw straws!');
     expect(() => megacruise.passengerSubtract(5)).toThrow('That is 5 more people leaving than expected, were there stowaways?!?')
   });
+
+it('make the ship set sail and not be in port', () => {
+    megacruise.toggleSail();
+    expect(megacruise.inPort).toEqual(false);
+    expect(megacruise.shipCheck()).toEqual('You are on the high seas!');
+    megacruise.toggleSail();
+    expect(megacruise.inPort).toEqual(true);
+    expect(megacruise.shipCheck()).toEqual('You are in Southampton dock');
+    megacruise.toggleSail();
+    expect(megacruise.inPort).toEqual(false);
+    expect(megacruise.shipCheck()).toEqual('You are on the high seas!');
+});
 });
