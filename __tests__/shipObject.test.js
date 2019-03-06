@@ -9,3 +9,5 @@ it('creates a new ship instance', () => {
     expect(new Ship()).toBeInstanceOf(Object);
 });
 });
+
+//testing the branch change
