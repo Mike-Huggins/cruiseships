@@ -9,29 +9,29 @@ function Ship(name, port, passengerCap, passengers) {
   this.inPort = startInPort;
 };
 
-Ship.prototype.portChange = function(newPort) {
+Ship.prototype.portChange = function (newPort) {
   this.port = newPort;
 };
 
-Ship.prototype.passengerAdd = function(value) {
-  if((this.passengers + value) > this.passengerCap) {
+Ship.prototype.passengerAdd = function (value) {
+  if ((this.passengers + value) > this.passengerCap) {
     throw new Error(`That is ${((this.passengers + value) - this.passengerCap)} too many, draw straws!`);
   }
   this.passengers += value;
 };
 
-Ship.prototype.passengerSubtract = function(value) {
-  if((this.passengers - value) < 0) {
+Ship.prototype.passengerSubtract = function (value) {
+  if ((this.passengers - value) < 0) {
     throw new Error(`That is ${-(this.passengers - value)} more people leaving than expected, were there stowaways?!?`);
   }
   this.passengers -= value;
 };
 
-Ship.prototype.toggleSail = function() {
+Ship.prototype.toggleSail = function () {
   this.inPort = !this.inPort;
 };
 
-Ship.prototype.shipCheck = function() {
+Ship.prototype.shipCheck = function () {
   if (this.inPort === false) {
     return 'You are on the high seas!';
   };
@@ -41,8 +41,5 @@ Ship.prototype.shipCheck = function() {
 };
 
 module.exports = {
-  Ship
-}
-
-/* change port method needed, passenger increase or decrease, distance travelled, 
-fuel required, supplies onboard */;
+  Ship,
+};
