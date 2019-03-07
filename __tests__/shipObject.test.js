@@ -32,7 +32,7 @@ xit('add and subtract passengers and have a check for remaining places', () => {
     expect(() => megacruise.passengerSubtract(5)).toThrow('That is 5 more people leaving than expected, were there stowaways?!?')
   });
 
-it('make the ship set sail and not be in port', () => {
+xit('make the ship set sail and not be in port', () => {
     megacruise.toggleSail();
     expect(megacruise.inPort).toEqual(false);
     expect(megacruise.shipCheck()).toEqual('You are on the high seas!');

@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">72% </span>
+        <span class="strong">32% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>18/25</span>
+        <span class='fraction'>8/25</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">37.5% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>3/8</span>
+        <span class='fraction'>0/8</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>3/6</span>
+        <span class='fraction'>0/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">72% </span>
+        <span class="strong">32% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>18/25</span>
+        <span class='fraction'>8/25</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -97,21 +97,14 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -123,15 +116,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -143,12 +143,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const startingPassengers = 0;
 const startInPort = true;
 &nbsp;
-function Ship(name, port, passengerCap, passengers) {
-  this.name = name;
-  this.port = port;
-  this.passengerCap = passengerCap;
-  this.passengers = startingPassengers;
-  this.inPort = startInPort;
+function <span class="fstat-no" title="function not covered" >Ship(</span>name, port, passengerCap, passengers) {
+<span class="cstat-no" title="statement not covered" >  this.name = name;</span>
+<span class="cstat-no" title="statement not covered" >  this.port = port;</span>
+<span class="cstat-no" title="statement not covered" >  this.passengerCap = passengerCap;</span>
+<span class="cstat-no" title="statement not covered" >  this.passengers = startingPassengers;</span>
+<span class="cstat-no" title="statement not covered" >  this.inPort = startInPort;</span>
 };
 &nbsp;
 Ship.prototype.portChange = <span class="fstat-no" title="function not covered" >fu</span>nction(newPort) {
@@ -169,16 +169,16 @@ Ship.prototype.passengerSubtract = <span class="fstat-no" title="function not co
 <span class="cstat-no" title="statement not covered" >  this.passengers -= value;</span>
 };
 &nbsp;
-Ship.prototype.toggleSail = function() {
-  this.inPort = !this.inPort;
+Ship.prototype.toggleSail = <span class="fstat-no" title="function not covered" >fu</span>nction() {
+<span class="cstat-no" title="statement not covered" >  this.inPort = !this.inPort;</span>
 };
 &nbsp;
-Ship.prototype.shipCheck = function() {
-  if (this.inPort === false) {
-    return 'You are on the high seas!';
+Ship.prototype.shipCheck = <span class="fstat-no" title="function not covered" >fu</span>nction() {
+<span class="cstat-no" title="statement not covered" >  if (this.inPort === false) {</span>
+<span class="cstat-no" title="statement not covered" >    return 'You are on the high seas!';</span>
   };
-  <span class="missing-if-branch" title="else path not taken" >E</span>if (this.inPort === true) {
-    return `You are in ${this.port} dock`; 
+<span class="cstat-no" title="statement not covered" >  if (this.inPort === true) {</span>
+<span class="cstat-no" title="statement not covered" >    return `You are in ${this.port} dock`; </span>
   }
 };
 &nbsp;
@@ -193,7 +193,7 @@ fuel required, supplies onboard */;</pre></td></tr>
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Mar 06 2019 18:18:52 GMT+0000 (Greenwich Mean Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Mar 07 2019 19:36:43 GMT+0000 (Greenwich Mean Time)
 </div>
 </div>
 <script src="prettify.js"></script>
