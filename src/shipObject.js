@@ -1,10 +1,12 @@
 const startingPassengers = 0;
+const startInPort = true;
 
 function Ship(name, port, passengerCap, passengers) {
   this.name = name;
   this.port = port;
   this.passengerCap = passengerCap;
   this.passengers = startingPassengers;
+  this.inPort = startInPort;
 };
 
 Ship.prototype.portChange = function(newPort) {
@@ -25,6 +27,18 @@ Ship.prototype.passengerSubtract = function(value) {
   this.passengers -= value;
 };
 
+Ship.prototype.toggleSail = function() {
+  this.inPort = !this.inPort;
+};
+
+Ship.prototype.shipCheck = function() {
+  if (this.inPort === false) {
+    return 'You are on the high seas!';
+  };
+  if (this.inPort === true) {
+    return `You are in ${this.port} dock`; 
+  }
+};
 
 module.exports = {
   Ship
