@@ -3,23 +3,32 @@ const { Port } = require('../src/portObject.js');
 
 describe('create a new instance of ship', () => {
   let megacruise;
+  let southampton;
   beforeEach(() => {
-    megacruise = new Ship('Megacruise', 'Southampton', 100, 0);
+    megacruise = new Ship('Megacruise', southampton, 100, 0);
+    southampton = new Port('Southampton');
   });
+
   xit('creates a new ship instance', () => {
     expect(new Ship()).toBeInstanceOf(Object);
   });
 
-  xit('ensure all parameters populate the ship object', () => {
-    expect(megacruise.name).toEqual('Megacruise');
-    expect(megacruise.port).toEqual('Southampton');
-    expect(megacruise.passengerCap).toEqual(100);
-    expect(megacruise.passengers).toEqual(0);
+  xit('check port imported from other module correctly', () => {
+    expect(new Port()).toBeInstanceOf(Object);
   });
 
-  xit('change port of the ship using a method', () => {
-    megacruise.portChange('Liverpool');
-    expect(megacruise.port).toEqual('Liverpool');
+  xit('check port is brought into ship correctly', () => {
+    expect(megacruise.port).toEqual(southampton);
+  });
+
+  xit('check port details', () => {
+    expect(megacruise.port.name).toEqual('Southampton');
+  });
+
+  xit('ensure all parameters populate the ship object', () => {
+    expect(megacruise.name).toEqual('Megacruise');
+    expect(megacruise.passengerCap).toEqual(100);
+    expect(megacruise.passengers).toEqual(0);
   });
 
   xit('add and subtract passengers and have a check for remaining places', () => {
@@ -39,7 +48,7 @@ describe('create a new instance of ship', () => {
     expect(megacruise.shipCheck()).toEqual('You are on the high seas!');
     megacruise.toggleSail();
     expect(megacruise.inPort).toEqual(true);
-    expect(megacruise.shipCheck()).toEqual('You are in Southampton dock');
+    expect(megacruise.shipCheck()).toEqual('You are in dock');
     megacruise.toggleSail();
     expect(megacruise.inPort).toEqual(false);
     expect(megacruise.shipCheck()).toEqual('You are on the high seas!');

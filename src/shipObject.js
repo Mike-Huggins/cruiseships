@@ -9,10 +9,6 @@ function Ship(name, port, passengerCap, passengers) {
   this.inPort = startInPort;
 };
 
-Ship.prototype.portChange = function (newPort) {
-  this.port = newPort;
-};
-
 Ship.prototype.passengerAdd = function (value) {
   if ((this.passengers + value) > this.passengerCap) {
     throw new Error(`That is ${((this.passengers + value) - this.passengerCap)} too many, draw straws!`);
@@ -36,7 +32,7 @@ Ship.prototype.shipCheck = function () {
     return 'You are on the high seas!';
   };
   if (this.inPort === true) {
-    return `You are in ${this.port} dock`; 
+    return 'You are in dock';
   }
 };
 
