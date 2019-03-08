@@ -38,8 +38,7 @@ Ship.prototype.shipCheck = function () {
 };
 
 Ship.prototype.dock = function (newPort) {
-  const port = new Port(newPort);
-  this.port = port;
+  this.port = newPort;
 };
 
 module.exports = {

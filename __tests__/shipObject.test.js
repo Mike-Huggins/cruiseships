@@ -4,9 +4,11 @@ const { Port } = require('../src/portObject.js');
 describe('create a new instance of ship', () => {
   let megacruise;
   let southampton;
+  let portsmouth;
   beforeEach(() => {
     megacruise = new Ship('Megacruise', southampton, 100, 0);
     southampton = new Port('Southampton');
+    portsmouth = new Port('Portsmouth');
   });
 
   xit('creates a new ship instance', () => {
@@ -53,8 +55,12 @@ describe('create a new instance of ship', () => {
     expect(megacruise.inPort).toEqual(false);
     expect(megacruise.shipCheck()).toEqual('You are on the high seas!');
   });
-  it('create a dock method to change port within ship', () => {
-    megacruise.dock('Portsmouth');
+  xit('create a dock method to change port within ship', () => {
+    megacruise.dock(portsmouth);
+    expect(megacruise.port).toEqual(portsmouth);
+  });
+  xit('test name of new port', () => {
+    megacruise.dock(portsmouth);
     expect(megacruise.port.name).toEqual('Portsmouth');
   });
 });
