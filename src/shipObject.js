@@ -1,5 +1,6 @@
 const startingPassengers = 0;
 const startInPort = true;
+const { Port } = require('../src/portObject.js');
 
 function Ship(name, port, passengerCap, passengers) {
   this.name = name;
@@ -34,6 +35,11 @@ Ship.prototype.shipCheck = function () {
   if (this.inPort === true) {
     return 'You are in dock';
   }
+};
+
+Ship.prototype.dock = function (newPort) {
+  const port = new Port(newPort);
+  this.port = port;
 };
 
 module.exports = {

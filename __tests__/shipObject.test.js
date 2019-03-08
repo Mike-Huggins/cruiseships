@@ -53,4 +53,8 @@ describe('create a new instance of ship', () => {
     expect(megacruise.inPort).toEqual(false);
     expect(megacruise.shipCheck()).toEqual('You are on the high seas!');
   });
+  it('create a dock method to change port within ship', () => {
+    megacruise.dock('Portsmouth');
+    expect(megacruise.port.name).toEqual('Portsmouth');
+  });
 });
