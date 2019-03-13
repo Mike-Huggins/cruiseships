@@ -1,27 +1,39 @@
 const { Ship } = require('../src/shipObject.js');
+const { Port } = require('../src/portObject.js');
 
 describe('create a new instance of ship', () => {
-let megacruise;
-beforeEach(() => {
-    megacruise = new Ship('Megacruise', 'Southampton', 100, 0);
+  let megacruise;
+  let southampton;
+  let portsmouth;
+  beforeEach(() => {
+    megacruise = new Ship('Megacruise', southampton, 100, 0);
+    southampton = new Port('Southampton');
+    portsmouth = new Port('Portsmouth');
   });
-xit('creates a new ship instance', () => {
-    expect(new Ship()).toBeInstanceOf(Object);
-});
 
-xit('ensure all parameters populate the ship object', () => {
-    expect(megacruise.name).toEqual("Megacruise");
-    expect(megacruise.port).toEqual("Southampton");
+  xit('creates a new ship instance', () => {
+    expect(new Ship()).toBeInstanceOf(Object);
+  });
+
+  xit('check port imported from other module correctly', () => {
+    expect(new Port()).toBeInstanceOf(Object);
+  });
+
+  xit('check port is brought into ship correctly', () => {
+    expect(megacruise.port).toEqual(southampton);
+  });
+
+  xit('check port details', () => {
+    expect(megacruise.port.name).toEqual('Southampton');
+  });
+
+  xit('ensure all parameters populate the ship object', () => {
+    expect(megacruise.name).toEqual('Megacruise');
     expect(megacruise.passengerCap).toEqual(100);
     expect(megacruise.passengers).toEqual(0);
   });
 
-xit('change port of the ship using a method', () => {
-    megacruise.portChange('Liverpool');
-    expect(megacruise.port).toEqual('Liverpool');
-});
-
-xit('add and subtract passengers and have a check for remaining places', () => {
+  xit('add and subtract passengers and have a check for remaining places', () => {
     megacruise.passengerAdd(20);
     expect(megacruise.passengers).toEqual(20);
     megacruise.passengerSubtract(15);
@@ -32,15 +44,23 @@ xit('add and subtract passengers and have a check for remaining places', () => {
     expect(() => megacruise.passengerSubtract(5)).toThrow('That is 5 more people leaving than expected, were there stowaways?!?')
   });
 
-xit('make the ship set sail and not be in port', () => {
+  xit('make the ship set sail and not be in port', () => {
     megacruise.toggleSail();
     expect(megacruise.inPort).toEqual(false);
     expect(megacruise.shipCheck()).toEqual('You are on the high seas!');
     megacruise.toggleSail();
     expect(megacruise.inPort).toEqual(true);
-    expect(megacruise.shipCheck()).toEqual('You are in Southampton dock');
+    expect(megacruise.shipCheck()).toEqual('You are in dock');
     megacruise.toggleSail();
     expect(megacruise.inPort).toEqual(false);
     expect(megacruise.shipCheck()).toEqual('You are on the high seas!');
-});
+  });
+  xit('create a dock method to change port within ship', () => {
+    megacruise.dock(portsmouth);
+    expect(megacruise.port).toEqual(portsmouth);
+  });
+  xit('test name of new port', () => {
+    megacruise.dock(portsmouth);
+    expect(megacruise.port.name).toEqual('Portsmouth');
+  });
 });
