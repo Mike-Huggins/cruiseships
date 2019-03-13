@@ -29,7 +29,7 @@ describe('create a new instance of port', () => {
     expect(southampton.ships).toEqual([mockShip, mockShip2, mockShip3]);
   });
 
-  it('test the remove a ship from port', () => {
+  xit('test the remove a ship from port', () => {
     const mockShip = { name: 'mockShip' };
     const mockShip2 = { name: 'mockShip2' };
     const mockShip3 = { name: 'mockShip3' };
