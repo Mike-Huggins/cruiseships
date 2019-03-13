@@ -10,6 +10,7 @@ function Ship(name, port, passengerCap, passengers) {
   this.inPort = startInPort;
 };
 
+// eslint-disable-next-line func-names
 Ship.prototype.passengerAdd = function (value) {
   if ((this.passengers + value) > this.passengerCap) {
     throw new Error(`That is ${((this.passengers + value) - this.passengerCap)} too many, draw straws!`);
@@ -17,6 +18,7 @@ Ship.prototype.passengerAdd = function (value) {
   this.passengers += value;
 };
 
+// eslint-disable-next-line func-names
 Ship.prototype.passengerSubtract = function (value) {
   if ((this.passengers - value) < 0) {
     throw new Error(`That is ${-(this.passengers - value)} more people leaving than expected, were there stowaways?!?`);
@@ -24,10 +26,12 @@ Ship.prototype.passengerSubtract = function (value) {
   this.passengers -= value;
 };
 
+// eslint-disable-next-line func-names
 Ship.prototype.toggleSail = function () {
   this.inPort = !this.inPort;
 };
 
+// eslint-disable-next-line func-names
 Ship.prototype.shipCheck = function () {
   if (this.inPort === false) {
     return 'You are on the high seas!';
