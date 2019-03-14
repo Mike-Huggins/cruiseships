@@ -36,7 +36,7 @@ describe('Ship constructor test suite', () => {
     const ship = new Ship(itenerary);
     expect(dover.ships).toContain(ship);
   });
-  it('can dock at a different port', () => {
+  xit('can dock at a different port', () => {
     const dover = new Port('Dover');
     const calais = new Port('Calais');
     const itenerary = new Itenerary([dover, calais]);
@@ -45,5 +45,14 @@ describe('Ship constructor test suite', () => {
     ship.dock();
     expect(ship.currentPort).toBe(calais);
     expect(calais.ships).toContain(ship);
+  });
+  xit('can set sail', () => {
+    const dover = new Port('Dover');  
+    const calais = new Port('Calais');  
+    const itenerary = new Itenerary([dover, calais]);  
+    const ship = new Ship(itenerary);  
+    ship.setSail();  
+    expect(ship.currentPort).toBeFalsy();  
+    expect(dover.ships).not.toContain(ship);  
   });
 });

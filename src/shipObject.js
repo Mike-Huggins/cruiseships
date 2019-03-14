@@ -8,11 +8,17 @@ function Ship(itenerary) {
 }
 
 Ship.prototype.setSail = function () {
+  const findPort = this.itenerary.ports.indexOf(this.currentPort);
+  this.previousPort = this.itenerary.ports[findPort];
+  this.currentPort.removeShip(this);
   this.currentPort = null;
 };
 
-Ship.prototype.dock = function (port) {
-  this.currentPort = port;
+Ship.prototype.dock = function () {
+  const itenerary = this.itenerary;
+  const previousPortIndex = itenerary.ports.indexOf(this.previousPort);
+  this.currentPort = itenerary.ports[previousPortIndex + 1];
+  this.currentPort.addShip(this);
 };
 
 module.exports = {
