@@ -13,4 +13,8 @@ describe('Ship constructor test suite', () => {
   it('create a new ship with starting port of Dover', () => {
     expect(ship.startingPort).toEqual('Dover');
   });
+  it('ship set sail', () => {
+    ship.setSail();
+    expect(ship.startingPort).toBeFalsy();
+  });
 });

@@ -4,6 +4,10 @@ function Ship(startingPort) {
   this.startingPort = startingPort;
 };
 
+Ship.prototype.setSail = function () {
+  this.startingPort = null;
+};
+
 // eslint-disable-next-line func-names
 /* Ship.prototype.toggleSail = function () {
   this.inPort = !this.inPort;
