@@ -3,20 +3,17 @@ const { Ship } = require('../src/shipObject.js');
 
 describe('create a new instance of port', () => {
   let southampton;
-  let megacruise;
-  let bananaBoat;
-  let funTime;
+  let ship;
+  let calais;
   beforeEach(() => {
     southampton = new Port('Southampton');
-    megacruise = new Ship ('Megacruise', southampton, 100, 0);
-    bananaBoat = new Ship ('BananaBoat', southampton, 150, 50);
-    funTime = new Ship ('FunTime', southampton, 200, 100);
-
+    ship = new Ship(southampton);
+    calais = new Port('Calais');
   });
   xit('creates a new port instance', () => {
     expect(new Port()).toBeInstanceOf(Object);
   });
-  xit('create a port with the name Portsmouth', () => {
+  xit('create a port with the name Southampton', () => {
     expect(southampton.name).toEqual('Southampton');
   });
   xit('test the add a ship to the port', () => {

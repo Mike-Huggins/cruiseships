@@ -1,12 +1,17 @@
 const { Port } = require('../src/portObject.js');
 
-function Ship(startingPort) {
-  this.startingPort = startingPort;
+function Ship(currentPort) {
+  this.currentPort = currentPort;
 };
 
 Ship.prototype.setSail = function () {
-  this.startingPort = null;
+  this.currentPort = null;
 };
+
+Ship.prototype.dock = function (port) {
+  this.currentPort = port;
+};
+
 
 // eslint-disable-next-line func-names
 /* Ship.prototype.toggleSail = function () {
