@@ -1,20 +1,20 @@
 /* globals describe it expect */
 const { Ship } = require('../src/shipObject.js');
 const { Port } = require('../src/portObject.js');
-const { Itenerary } = require('../src/itinerary.js');
+const { Itinerary } = require('../src/itinerary.js');
 
 describe('Ship constructor test suite', () => {
   /* let ship;
   let southampton;
   let calais;
-  let itenerary;
+  let itinerary;
   let ship2;
   beforeEach(() => {
     ship = new Ship(southampton);
     southampton = new Port('Southampton');
     calais = new Port('Calais');
-    itenerary = new Itenerary([southampton]);
-    ship2 = new Ship(itenerary);
+    itenerary = new Itinerary([southampton]);
+    ship2 = new Ship(itinerary);
   }); */
   xit('creates a new ship instance', () => {
     expect(new Ship()).toBeInstanceOf(Object);
@@ -32,15 +32,15 @@ describe('Ship constructor test suite', () => {
   });
   xit('port added to ship itenerary on ship instantiation', () => {
     const dover = new Port('Dover');
-    const itenerary = new Itenerary([dover]);
-    const ship = new Ship(itenerary);
+    const itinerary = new Itinerary([dover]);
+    const ship = new Ship(itinerary);
     expect(dover.ships).toContain(ship);
   });
   xit('can dock at a different port', () => {
     const dover = new Port('Dover');
     const calais = new Port('Calais');
-    const itenerary = new Itenerary([dover, calais]);
-    const ship = new Ship(itenerary);
+    const itinerary = new Itinerary([dover, calais]);
+    const ship = new Ship(itinerary);
     ship.setSail();
     ship.dock();
     expect(ship.currentPort).toBe(calais);
@@ -49,8 +49,8 @@ describe('Ship constructor test suite', () => {
   xit('can set sail', () => {
     const dover = new Port('Dover');  
     const calais = new Port('Calais');  
-    const itenerary = new Itenerary([dover, calais]);  
-    const ship = new Ship(itenerary);  
+    const itinerary = new Itinerary([dover, calais]);  
+    const ship = new Ship(itinerary);  
     ship.setSail();  
     expect(ship.currentPort).toBeFalsy();  
     expect(dover.ships).not.toContain(ship);  
