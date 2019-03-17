@@ -24,23 +24,23 @@ describe('Ship constructor test suite', () => {
     ship.setSail();
     expect(ship.startingPort).toBeFalsy();
   });
-  xit('Ship docks at a different port', () => {
+  xit('Ship docks at a different port along the itinerary', () => {
     ship.setSail();
-    ship.dock(calais);
+    ship.dock();
     expect(ship.currentPort).toEqual(calais);
   });
-  xit('port added to ship itenerary on ship instantiation', () => {
+  xit('port added to ship itinerary on ship instantiation', () => {
     expect(dover.ships).toContain(ship);
   });
-  xit('can dock at a different port', () => {
+  xit('can dock at a different port and becomes part of the ship roster', () => {
     ship.setSail();
     ship.dock();
     expect(ship.currentPort).toBe(calais);
     expect(calais.ships).toContain(ship);
   });
-  xit('can set sail', () => {
+  xit('can set sail and confirm the port is empty', () => {
     ship.setSail();
-    expect(ship.currentPort).toBeFalsy();  
-    expect(dover.ships).not.toContain(ship);  
+    expect(ship.currentPort).toBeFalsy();
+    expect(dover.ships).not.toContain(ship);
   });
 });
