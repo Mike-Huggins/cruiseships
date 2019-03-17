@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">25% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>16/16</span>
+        <span class='fraction'>4/16</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,21 +30,21 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>3/3</span>
+        <span class='fraction'>0/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">25% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>16/16</span>
+        <span class='fraction'>4/16</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -75,24 +75,24 @@
 <a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
@@ -100,25 +100,25 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const { Port } = require('../src/portObject.js');
 &nbsp;
-function Ship(itenerary) {
-  this.itenerary = itenerary;
-  this.currentPort = itenerary.ports[0];
-  this.previousPort = null;
-  this.currentPort.addShip(this);
+function <span class="fstat-no" title="function not covered" >Ship(</span>itinerary) {
+<span class="cstat-no" title="statement not covered" >  this.itinerary = itinerary;</span>
+<span class="cstat-no" title="statement not covered" >  this.currentPort = itinerary.ports[0];</span>
+<span class="cstat-no" title="statement not covered" >  this.previousPort = null;</span>
+<span class="cstat-no" title="statement not covered" >  this.currentPort.addShip(this);</span>
 }
 &nbsp;
-Ship.prototype.setSail = function () {
-  const findPort = this.itenerary.ports.indexOf(this.currentPort);
-  this.previousPort = this.itenerary.ports[findPort];
-  this.currentPort.removeShip(this);
-  this.currentPort = null;
+Ship.prototype.setSail = <span class="fstat-no" title="function not covered" >fu</span>nction () {
+  const findPort = <span class="cstat-no" title="statement not covered" >this.itinerary.ports.indexOf(this.currentPort);</span>
+<span class="cstat-no" title="statement not covered" >  this.previousPort = this.itinerary.ports[findPort];</span>
+<span class="cstat-no" title="statement not covered" >  this.currentPort.removeShip(this);</span>
+<span class="cstat-no" title="statement not covered" >  this.currentPort = null;</span>
 };
 &nbsp;
-Ship.prototype.dock = function () {
-  const itenerary = this.itenerary;
-  const previousPortIndex = itenerary.ports.indexOf(this.previousPort);
-  this.currentPort = itenerary.ports[previousPortIndex + 1];
-  this.currentPort.addShip(this);
+Ship.prototype.dock = <span class="fstat-no" title="function not covered" >fu</span>nction () {
+  const itinerary = <span class="cstat-no" title="statement not covered" >this.itinerary;</span>
+  const previousPortIndex = <span class="cstat-no" title="statement not covered" >itinerary.ports.indexOf(this.previousPort);</span>
+<span class="cstat-no" title="statement not covered" >  this.currentPort = itinerary.ports[previousPortIndex + 1];</span>
+<span class="cstat-no" title="statement not covered" >  this.currentPort.addShip(this);</span>
 };
 &nbsp;
 module.exports = {
@@ -130,7 +130,7 @@ module.exports = {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Mar 14 2019 21:23:37 GMT+0000 (Greenwich Mean Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Mar 17 2019 12:45:13 GMT+0000 (Greenwich Mean Time)
 </div>
 </div>
 <script src="prettify.js"></script>
